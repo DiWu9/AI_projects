@@ -1,0 +1,32 @@
+According to the Russel & Norvig Chapter 6, the performance of a game playing
+program is dependent on the quality of its evaluation function. A good evaluation
+function can lead the player to find the optimal solution in a limited time, but
+a bad one will misguide the player to an undesired situation. Therefore, a good
+evaluation function is necessary for a successful game playing program. While
+designing the evaluation function, I tried to design my evaluation function to
+be both efficient and accurate, which means the function can give a reasonable
+according to the chance of winning in a short time. The larger the score is, the
+bigger chance the maximizer (Black side) wins; the smaller the score is, the
+bigger chance the minimizer (White side) wins.
+
+In order to decide which side of the board has greater chance to win, we should
+first analyze the rule of the game itself. A player in Konane loses when none
+of his/her/its chess can move. Therefore, we should count the number of chess
+that can move in the evaluator and gave it weight 4 for this factor directly
+reflects the chance of winning. Another factor I counted in the evaluator is
+the number of options a position can move and I gave it weight 1 because the
+number of moves is not always an advantage; it also reflects number of opponents.
+The last factor is the number of chess on the board.
+
+Hence, the equation is:
+
+      eval(r,c) = 4 * moveable(0 or 1) + 1 * numberOfOptions + 1 (means its a chess)
+
+The evaluator iterates every position in the board and give a score to each of
+them. If the position is a maximizer, it will return a positive score, and if
+the position is a minimizer, it will return a negative score. The final score
+of the board is the sum of the scores of all positions.
+
+This equations is turned out to be effective because it beats every other types
+of players and it decides a move quickly when the limit of depth is less or equal
+to 4.

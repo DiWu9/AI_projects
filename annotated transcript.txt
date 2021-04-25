@@ -1,0 +1,58 @@
+The following is the annotated transcript of a conversation between a user (U) and the chatbot (B).
+
+B: Do you know that the top of most ovens lifts up for easy cleaning ?
+U: interesting
+B: Do you know that feeding bread to ducks is dangerous ?
+U:
+B: Do you want to hear a joke?
+U: sure
+B: I ate a clock yesterday, it was very time consuming.
+
+For step2, two new reply-producing function were added, and they are showKnowledge() and tellJokes().
+
+B: how are you today?
+U: I am great
+B: Tell me more about you are great
+U: I just created you and I found you are somewhat intelligent.
+B: Tell me more about you just created I and you found I am somewhat intelligent.
+
+Also for step2, PronounDictionary is expanded to include object pronoun (my:your), reflexive pronoun
+(myself:yourself). New hedges and new prefixes are added.
+
+U: I did it by myself
+B: What do you mean when you said you did it by yourself
+U: They are interesting
+B: Tell me more about They are interesting
+U: you are clever
+B: What do you mean when you said I am clever
+U: I mean you are intelligent
+B: Earlier you said that they are interesting, do you mind to tell me more about it?
+
+For step3, switchPerson() replaces changePerson() and 'you':'I' problem is solved (The pronoun only changes once
+and will not change back anymore). "They are" in switchPerson() will not change to "They am".
+For step4, the chatbot can refer previous conversation by saying: "Earlier you said that they are interesting,
+do you mind to tell me more about it?" The memory of chatbot is saved in list priorInputs.
+
+B: how are you today?
+U: I am great
+B: What's your gender?
+U: My gender is male.
+B: Got it, interesting.
+U: what's my name?
+B: I think you haven't tell me yet...
+U: what's my gender?
+B: Your gender is male
+
+The conversation above shows some features created in step 5. The chatbot can ask user questions about
+name, gender, and birthday. The bot can remember user's information about name, gender, and birthday when
+being asked again. However, the information about user's name, birthday, and gender can only be recorded
+in the memory of chatbot when user reply in the form: my gender/name/birthday is ...
+
+Morevoer, the chatbot can answer the questions about his name, birthday, and gender:
+
+U: When's your birthday?
+B: I was initialized in Jan 12, 2020.
+U: What's your name?
+B: , my name is W.
+U: What' your gender?
+B: Good question. I'm a man.

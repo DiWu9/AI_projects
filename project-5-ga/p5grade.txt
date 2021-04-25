@@ -1,0 +1,7 @@
+50/50 Code:
+25/25 Results+Analysis:
+10/25 Writeup:
+
+Total: 85
+
+Notes: hard to look at your results when they weren't inline with the rest of the notebook.

@@ -1,0 +1,8 @@
+/20 Q learning
+/20 Decay
+/30 New Environment
+15/30 Analysis/Results
+
+Total: 85
+
+Notes: no writeup or analysis to speak of

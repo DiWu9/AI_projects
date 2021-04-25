@@ -1,0 +1,12 @@
+Grade:
+
+Step 2: Customize it  25/25
+Step 3: A better changePerson()  25/25
+Step 4:  A memory  25/25
+Step 5: Make it your own  10/25 - minimal
+
+Total:  85
+
+Notes: customization was minimal.  many times your chatbot asked the same personal questions that really should have only been asked once, especially when it says "great, I'll remember it", and then asks me the same question again
+
+
